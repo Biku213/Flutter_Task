@@ -135,8 +135,7 @@ class _DemoPageState extends State<DemoPage> {
                   ),
                   Expanded(
                     child: SizedBox(
-                      height: MediaQuery.of(context).size.height / 2 * 1.45,
-                      child: ListView.builder(
+                     child: ListView.builder(
                           itemCount: posts?.length,
                           itemBuilder: (BuildContext context, int index) {
                             return Container(

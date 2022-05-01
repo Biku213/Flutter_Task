@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task/demopage.dart';
 import 'package:task/models/post.dart';
 import 'package:task/services/remote_service.dart';
 
@@ -44,7 +43,7 @@ class _ApiDemoState extends State<ApiDemo> {
   Widget build(BuildContext context) {
     TextEditingController _controller = TextEditingController();
     return Scaffold(
-       backgroundColor: Colors.blueGrey.shade500,
+        backgroundColor: Colors.blueGrey.shade500,
         body: SafeArea(
           child: Column(children: [
             // ignore: sized_box_for_whitespace
@@ -57,20 +56,18 @@ class _ApiDemoState extends State<ApiDemo> {
                     Icons.arrow_back_ios,
                     color: Colors.white,
                   ),
-            
                   title: Text(
                     "Posts",
-                    style: TextStyle( 
+                    style: TextStyle(
                         color: Colors.white,
                         fontSize: 21,
-                        fontWeight: FontWeight.w900
-                        ),
+                        fontWeight: FontWeight.w900),
                   ),
                   trailing: Icon(
                     Icons.filter_list_rounded,
                     color: Colors.white,
                   ),
-                    ),
+                ),
               ),
             ),
             Expanded(
@@ -123,7 +120,6 @@ class _ApiDemoState extends State<ApiDemo> {
                   ),
                   Expanded(
                     child: SizedBox(
-                      height: MediaQuery.of(context).size.height / 2 * 1.45,
                       child: ListView.builder(
                           itemCount: posts?.length,
                           itemBuilder: (BuildContext context, int index) {
